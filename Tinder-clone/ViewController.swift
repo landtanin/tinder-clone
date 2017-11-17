@@ -138,6 +138,13 @@ class ViewController: UIViewController {
             
             query.whereKey("objectId", notContainedIn: ignoredUsers)
             
+            // create location box from user location
+            if let geoPoint = PFUser.current()?["location"] as? PFGeoPoint{
+                
+                query.whereKey("location", withinGeoBoxFromSouthwest: PFGeoPoint(latitude: geoPoint.latitude - 1, longitude: geoPoint.longitude - 1), toNortheast: PFGeoPoint(latitude: geoPoint.latitude + 1, longitude: geoPoint.longitude + 1))
+                
+            }
+            
             // query one user at a time
             query.limit = 1
             
