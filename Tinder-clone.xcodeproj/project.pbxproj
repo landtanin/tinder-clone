@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AB43733FA70C95502F885877 /* Pods_Tinder_clone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 369EF80F01294603B7F39154 /* Pods_Tinder_clone.framework */; };
 		F318BC2D1FBEC94800AC62D5 /* MatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F318BC2C1FBEC94800AC62D5 /* MatchesViewController.swift */; };
+		F318BC2F1FBEE48E00AC62D5 /* MatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F318BC2E1FBEE48E00AC62D5 /* MatchTableViewCell.swift */; };
 		F33BE4871FBC482B00E2E555 /* UpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33BE4861FBC482B00E2E555 /* UpdateViewController.swift */; };
 		F37D45401FB463E40012EB49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37D453F1FB463E40012EB49 /* AppDelegate.swift */; };
 		F37D45421FB463E40012EB49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37D45411FB463E40012EB49 /* ViewController.swift */; };
@@ -23,6 +24,7 @@
 		5159BF3A4D7163F0AC5C73A6 /* Pods-Tinder-clone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tinder-clone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tinder-clone/Pods-Tinder-clone.debug.xcconfig"; sourceTree = "<group>"; };
 		64460777CFB55E256945AE6E /* Pods-Tinder-clone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tinder-clone.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tinder-clone/Pods-Tinder-clone.release.xcconfig"; sourceTree = "<group>"; };
 		F318BC2C1FBEC94800AC62D5 /* MatchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesViewController.swift; sourceTree = "<group>"; };
+		F318BC2E1FBEE48E00AC62D5 /* MatchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTableViewCell.swift; sourceTree = "<group>"; };
 		F33BE4861FBC482B00E2E555 /* UpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateViewController.swift; sourceTree = "<group>"; };
 		F37D453C1FB463E40012EB49 /* Tinder-clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tinder-clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F37D453F1FB463E40012EB49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				F3A535141FBACDB400AA443A /* LoginViewController.swift */,
 				F33BE4861FBC482B00E2E555 /* UpdateViewController.swift */,
 				F318BC2C1FBEC94800AC62D5 /* MatchesViewController.swift */,
+				F318BC2E1FBEE48E00AC62D5 /* MatchTableViewCell.swift */,
 			);
 			path = "Tinder-clone";
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3A535151FBACDB400AA443A /* LoginViewController.swift in Sources */,
+				F318BC2F1FBEE48E00AC62D5 /* MatchTableViewCell.swift in Sources */,
 				F37D45421FB463E40012EB49 /* ViewController.swift in Sources */,
 				F318BC2D1FBEC94800AC62D5 /* MatchesViewController.swift in Sources */,
 				F37D45401FB463E40012EB49 /* AppDelegate.swift in Sources */,
