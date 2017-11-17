@@ -33,6 +33,15 @@ class ViewController: UIViewController {
         
         updateImage()
         
+        PFGeoPoint.geoPointForCurrentLocation { (geoPoint, error) in
+            
+            if let point = geoPoint {
+                PFUser.current()?["location"] = point
+                PFUser.current()?.saveInBackground()
+            }
+            
+        }
+        
     }
     
     @IBAction func logoutTapped(_ sender: UIBarButtonItem) {
