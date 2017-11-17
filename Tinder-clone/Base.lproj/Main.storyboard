@@ -85,6 +85,58 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sgh-Of-uzZ">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="144" id="stL-qr-Nvb">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="144"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="stL-qr-Nvb" id="mSk-Th-Aid">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="143.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="65g-r3-g7k">
+                                                    <rect key="frame" x="5" y="5" width="133.5" height="133.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="65g-r3-g7k" secondAttribute="height" multiplier="1:1" id="ScT-zI-PLh"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTX-Q2-Zd9">
+                                                    <rect key="frame" x="144" y="5" width="226" height="47"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="47" id="jfX-oo-bwQ"/>
+                                                    </constraints>
+                                                    <string key="text">Label
+kjhgkjhg</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="write a message ..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DYu-RZ-gJH">
+                                                    <rect key="frame" x="143.5" y="57" width="226.5" height="30"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z5G-Nc-CCw">
+                                                    <rect key="frame" x="324" y="98.5" width="36" height="30"/>
+                                                    <state key="normal" title="Send"/>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="65g-r3-g7k" firstAttribute="top" secondItem="mSk-Th-Aid" secondAttribute="top" constant="5" id="5xn-AH-PFL"/>
+                                                <constraint firstAttribute="trailing" secondItem="GTX-Q2-Zd9" secondAttribute="trailing" constant="5" id="QXE-0Y-Pjw"/>
+                                                <constraint firstAttribute="trailing" secondItem="DYu-RZ-gJH" secondAttribute="trailing" constant="5" id="SrN-W2-RKf"/>
+                                                <constraint firstAttribute="bottom" secondItem="65g-r3-g7k" secondAttribute="bottom" constant="5" id="Umk-gO-k5D"/>
+                                                <constraint firstItem="DYu-RZ-gJH" firstAttribute="leading" secondItem="65g-r3-g7k" secondAttribute="trailing" constant="5" id="WE2-lf-EcD"/>
+                                                <constraint firstAttribute="trailing" secondItem="Z5G-Nc-CCw" secondAttribute="trailing" constant="15" id="b19-Yu-OS6"/>
+                                                <constraint firstItem="GTX-Q2-Zd9" firstAttribute="top" secondItem="mSk-Th-Aid" secondAttribute="top" constant="5" id="bpS-i5-qDi"/>
+                                                <constraint firstItem="DYu-RZ-gJH" firstAttribute="top" secondItem="GTX-Q2-Zd9" secondAttribute="bottom" constant="5" id="d6p-eD-346"/>
+                                                <constraint firstAttribute="bottom" secondItem="Z5G-Nc-CCw" secondAttribute="bottom" constant="15" id="fO3-Jx-XN2"/>
+                                                <constraint firstItem="65g-r3-g7k" firstAttribute="leading" secondItem="mSk-Th-Aid" secondAttribute="leading" constant="5" id="gIR-rR-Cqo"/>
+                                                <constraint firstItem="GTX-Q2-Zd9" firstAttribute="leading" secondItem="65g-r3-g7k" secondAttribute="trailing" constant="5" id="iip-3A-eaf"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -102,7 +154,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AKV-UP-emG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3673" y="134"/>
+            <point key="canvasLocation" x="3672.8000000000002" y="133.5832083958021"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="PJ7-Qx-ax6">
