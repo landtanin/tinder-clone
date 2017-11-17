@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import Parse
 
 class MatchTableViewCell: UITableViewCell {
 
+    var recipientObjectId = ""
+    
     @IBOutlet var messageLabel: UILabel!
     @IBOutlet var messageTextField: UITextField!
     @IBOutlet var profileImageView: UIImageView!
@@ -19,6 +22,15 @@ class MatchTableViewCell: UITableViewCell {
     }
 
     @IBAction func sendTapped(_ sender: UIButton) {
+        
+        let message = PFObject(className: "Message")
+        
+        message["sender"] = PFUser.current()?.objectId
+        message["recipient"] = recipientObjectId
+        message["content"] = messageTextField.text
+        
+        message.saveInBackground()
+        
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

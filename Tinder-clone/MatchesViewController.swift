@@ -15,6 +15,7 @@ class MatchesViewController: UIViewController, UITableViewDataSource, UITableVie
     
     var images : [UIImage] = []
     var userIds : [String] = []
+    var messages : [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,12 +47,30 @@ class MatchesViewController: UIViewController, UITableViewDataSource, UITableVie
                                             
                                             if let image = UIImage(data: imageData){
                                                 
-                                                self.images.append(image)
-                                                
                                                 if let objectId = theUser.objectId {
                                                     
-                                                    self.userIds.append(objectId)
-                                                    self.tableView.reloadData()
+                                                    let messagesQuery = PFQuery(className: "Message")
+                                                    
+                                                    messagesQuery.whereKey("recipient", equalTo: PFUser.current()?.objectId as Any)
+                                                    messagesQuery.whereKey("sender", equalTo: theUser.objectId as Any)
+                                                    
+                                                    messagesQuery.findObjectsInBackground(block: { (objects, error) in
+                                                        
+                                                        var messagetext = "No message from this user."
+                                                        if let objects = objects {
+                                                            for message in objects {
+                                                                if let content = message["content"] as? String {
+                                                                    messagetext = content
+                                                                }
+                                                            }
+                                                        }
+                                                        
+                                                        self.messages.append(messagetext)
+                                                        self.images.append(image)
+                                                        self.userIds.append(objectId)
+                                                        self.tableView.reloadData()
+                                                        
+                                                    })
                                                     
                                                 } // if let objectId = theUser.objectId {
                                                 
@@ -87,6 +106,8 @@ class MatchesViewController: UIViewController, UITableViewDataSource, UITableVie
         if let cell = tableView.dequeueReusableCell(withIdentifier: "matchCell", for: indexPath) as? MatchTableViewCell{
             cell.messageLabel.text = "You haven't received a message yet"
             cell.profileImageView.image = images[indexPath.row]
+            cell.recipientObjectId = userIds[indexPath.row]
+            cell.messageLabel.text = messages[indexPath.row]
             return cell
             
         }
